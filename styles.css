@@ -1,0 +1,83 @@
+.navbar{
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+}
+
+ .nav-brand-img {
+    width: 200px;
+ }
+
+ #pages {
+     margin-top: 16px;
+     margin-left: 35px;
+ }
+
+ #start-date {
+    border-radius: .25rem
+ }
+
+ #end-date {
+    border-radius: .25rem
+ }
+
+ .left-bar {
+    width: 50vw; 
+    display: flex;
+     justify-self: flex-start;
+     align-items: center;
+ }
+
+ .right-bar {
+    width: 50vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-bar p {
+    text-align: right;
+    margin-top: 19px;
+    padding: 0px 10px 0px 10px;
+}
+
+.section {
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.card {
+    display: block;
+    width: 25vw;
+    
+    margin: 15px;
+    /* height: 20vw; */
+    box-shadow: 2px 2px 10px rgba(24, 24, 24, .6);
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
+}
+
+.card:hover { transform: scale(1.08); }
+
+.card-img-top{
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 5px;
+  
+}
+.card-body {
+    padding: 0px 12px 0px 12spx;
+}
+
+.btn btn-primary {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.card-text {
+    min-height: 45%;
+}

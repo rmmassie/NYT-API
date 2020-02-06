@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>New York Times Article Search</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="left-bar">
+        <a class="navbar-brand" href="#"><img src="./assets/NYT-wordmark.png" alt="'New York Times'" class="nav-brand-img"></a>
+
+        <form id ='searchForm' class="form-inline my-2 my-lg-0">
+            <input id='searchBox' class="form-control mr-sm-2" type="search" placeholder="Enter Search Terms" aria-label="Search">
+            <button id='searchSubmit' class="btn btn-outline-success my-2 my-sm-0" type="submit" >Submit</button>
+         </form>
+         <nav id='pages'>
+            <ul class="pagination">
+              <li id='prevLi' class="page-item">
+                <a id='prev' class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+              </li>
+            
+              <li id='nextLi'class="page-item">
+                <a id='next' class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        
+        
+        </div>
+        <div class="right-bar"><p>
+            
+            
+            <label for="start-date">Start Date: </label>
+            <input type="date" id="start-date" class="start-date" pattern="[0-9]{8}">
+          </p>
+          <p>
+            <label for="end-date">End Date: </label>
+            <input type="date" id="end-date" class="end-date" pattern="[0-9]{8}">
+          </p>
+        
+        </div>
+      </nav>
+      
+      
+      
+      <!-- <div class="pages">
+        <button class="prev">Previous 10</button>
+        <button class="next">Next 10</button>
+      </div> -->
+    <section class="section">
+      
+    </section>
+  
+    <!-- <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

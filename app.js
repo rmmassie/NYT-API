@@ -63,27 +63,26 @@ function displayResults(json) {
         newNav.style.display = 'block';
         prevLi.setAttribute('class', "page-item disabled")
         nextLi.setAttribute('class', "page-item")
-        // previousBtn.setAttribute('aria-disabled', 'true')
-        // nextBtn.setAttribute('aria-disabled', 'false')
+        
     } else if (articles.length === 10 && pageNumber > 0) {
         // Both Buttons Functional.
         console.log('articles.length === 10 && pageNumber > 0')
         newNav.style.display = 'block';
         prevLi.setAttribute('class', "page-item")
         nextLi.setAttribute('class', "page-item")
-        // previousBtn.setAttribute('aria-disabled', 'false');
-        // nextBtn.setAttribute('aria-disabled', 'false');
+      
     } else if (articles.length < 10 && pageNumber > 0) {
+        //Disable Next Button
         console.log('articles.length < 10 && pageNumber > 0')
         newNav.style.display = 'block';
         prevLi.setAttribute('class', "page-item")
         nextLi.setAttribute('class', "page-item disabled")
-        // previousBtn.setAttribute('aria-disabled', 'false');
-        // nextBtn.setAttribute('aria-disabled', 'true');
+    
     } else if (pageNumber == 0) {
+        //Disable N
         newNav.style.display = 'block';
         prevLi.setAttribute('class', "page-item disabled")
-        // previousBtn.setAttribute('aria-disabled', 'true');
+        
     } else {
         newNav.style.display = 'none';
         }
@@ -107,18 +106,20 @@ function displayResults(json) {
             let cardBody = document.createElement('div');
             cardBody.setAttribute('class', 'card-body');
             //card title
-            let heading = document.createElement('h5');
-            heading.setAttribute('class',  'card-title')
+            // let heading = document.createElement('h5');
+            // heading.setAttribute('class',  'card-title')
             
             //Link fot the card Button
             let link = document.createElement('a');
             link.setAttribute('class', 'btn btn-primary')
-            
-            let summary = document.createElement('p');
+            let date = document.createElement('p')
+            let summary = document.createElement('h5');
             summary.setAttribute('class', 'card-text')
                         
             let current = articles[i];
-            
+            date.textContent = current.pub_date;
+            date.textContent = 'Published on ' +date.textContent.slice(0,10)
+            console.log(date)
             link.href = current.web_url;
             link.textContent = 'Read More...';
 
@@ -133,10 +134,10 @@ function displayResults(json) {
             summary.textContent = current.headline.main
                         
                        
-            cardBody.appendChild(heading);
+            // cardBody.appendChild(heading);
             cardBody.appendChild(summary);
             cardBody.appendChild(link)
-            
+            cardBody.appendChild(date)
             container.appendChild(img)
             container.appendChild(cardBody);
             section.appendChild(container);
